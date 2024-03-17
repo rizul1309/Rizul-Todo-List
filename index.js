@@ -1,20 +1,18 @@
 import express from 'express';
 import Connection from './database/db.js';
-import cors from 'cors'
+const cors = require('cors')
 import route from './routes/route.js';
 import bodyParser from 'body-parser';
 
 const app = express();
 const corsOpts = {
-    origin: '*',
-  
+    origin: '*',  
     methods: [
       'GET',
       'POST',
       'PUT',
       'DELETE',
-    ],
-  
+    ],  
     allowedHeaders: [
       'Content-Type',
     ],
