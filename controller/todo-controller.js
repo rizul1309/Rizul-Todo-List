@@ -16,7 +16,6 @@ export const addTODO =async (request,response)=>{
 export const getallTodos =async (request,response)=>{
     try {
         const todos = await todo.find({}).sort({createdAt:-1});
-        response.header("Access-Control-Allow-Origin", "*");
         response.status(200).json(todos)
     }
     catch(error)
