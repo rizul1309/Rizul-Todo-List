@@ -5,10 +5,7 @@ import route from './routes/route.js';
 import bodyParser from 'body-parser';
 
 const app = express();
-app.use(cors({
-    origin: ['https://rizul-todo-list-gui.vercel.app'],
-    credentials: true
-}));
+app.use(cors());
 app.use(bodyParser.json({extended:true}))
 app.use(bodyParser.urlencoded({extended:true}))
 app.use('/',route)
